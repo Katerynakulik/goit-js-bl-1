@@ -81,35 +81,55 @@
 // };
 // counting();
 
-function getNumbers(min, max) {
-    let newcount = 0;
-    for (let i=max; i>=min; i--){
-        console.log(i);
-        if (i % 2 === 0){
-            newcount += i;
-        }
-    }
-    return newcount;
+// function getNumbers(min, max) {
+//     let newcount = 0;
+//     for (let i=max; i>=min; i--){
+//         console.log(i);
+//         if (i % 2 === 0){
+//             newcount += i;
+//         }
+//     }
+//     return newcount;
     
-};
+// };
 
-console.log(getNumbers(3,15));
-
-
+// console.log(getNumbers(3,15));
 
 
-function min(a, b) {
-    if (a === Number(a) && b === Number(b)){
-        if (a > b) {
-            return b;
-        } else {
-            return a;
-        }
-    } else {
-        return 'Not a number!';
+
+
+
+// function min(a, b) {
+//     if (a === Number(a) && b === Number(b)){
+//         if (a > b) {
+//             return b;
+//         } else {
+//             return a;
+//         }
+//     } else {
+//         return 'Not a number!';
+//     }
+// };
+
+// console.log(min(15,27));
+// console.log(min(215,27));
+// console.log(min(15,'27'));
+
+
+function calculateTotalPrice(productName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+  for (const product of products){
+    if (productName === product.name){
+      return product.price * product.quantity;
     }
-};
+  }
+  return `Product "${productName}" not found!`;
+}
 
-console.log(min(15,27));
-console.log(min(215,27));
-console.log(min(15,'27'));
+console.log(calculateTotalPrice("Blaster"));
+
